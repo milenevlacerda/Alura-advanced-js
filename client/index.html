@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
 
 </head>
-<body class="container">
+<body class="container" onsubmit="negociacaoController.adiciona( event )">
 
     <h1 class="text-center">Negociações</h1>
 
@@ -61,14 +61,22 @@
 
     <!-- <script src="js/index.js"></script> -->
     <script src="js/app/models/Negociacao.js"></script>
+    <script src="js/app/controllers/NegociacaoController.js"></script>
     <script>
-
-        var n1 = new Negociacao(new Date(), 5, 700);
-        var volume = n1.obtemVolume();
-
-        console.log(n1);
-        console.log(volume);
+        let negociacaoController = new NegociacaoController();
+        negociacaoController.limpaCampos();
     </script>
+    <!-- <script>
+
+        let n1 = new Negociacao( hoje, 5, 700 );
+        let volume = n1.volume;
+
+        console.log(n1.quantidade);
+        console.log(n1.valor);
+        console.log(n1.data);
+        console.log(volume);
+
+    </script> -->
 
 </body>
 </html>
